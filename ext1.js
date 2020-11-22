@@ -13,53 +13,53 @@ const blockIconURI = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0i
 const menuIconURI = blockIconURI; 
 
 class Scratch3HelloBlocks {
-    constructor (runtime) {
-        /**
-         * The runtime instantiating this block package.
-         * @type {Runtime}
-         */
-        this.runtime = runtime;
-    }
+    // constructor (runtime) {
+    //     /**
+    //      * The runtime instantiating this block package.
+    //      * @type {Runtime}
+    //      */
+    //     this.runtime = runtime;
+    // }
 
 
-    /**
-     * The key to load & store a target's pen-related state.
-     * @type {string}
-     */
-    static get STATE_KEY () {
-        return 'Scratch.helloWorld';
-    }
+    // /**
+    //  * The key to load & store a target's pen-related state.
+    //  * @type {string}
+    //  */
+    // static get STATE_KEY () {
+    //     return 'Scratch.helloWorld';
+    // }
 
-    /**
-     * @returns {object} metadata for this extension and its blocks.
-     */
+    // /**
+    //  * @returns {object} metadata for this extension and its blocks.
+    //  */
     getInfo () {
         return {
-            id: 'helloWorld',
-            name: formatMessage({
-                id: 'helloWorld.categoryName',
-                default: 'hello World',
-                description: 'Label for the hello world extension category'
+            "id": 'helloWorld',
+            "name": formatMessage({
+                "id": 'helloWorld.categoryName',
+                "default": 'hello World',
+                "description": 'Label for the hello world extension category'
             }),
             // menuIconURI: menuIconURI,
-            blockIconURI: blockIconURI,
+            "blockIconURI": blockIconURI,
             // showStatusButton: true,
-            blocks: [
+            "blocks": [
                 {
-                    opcode: 'say',
-                    blockType: BlockType.COMMAND,
-                    text: formatMessage({
-                        id: 'helloWorld.say',
-                        default: 'say [TEXT]',
-                        description: 'say something'
+                    "opcode": 'say',
+                    "blockType": BlockType.COMMAND,
+                    "text": formatMessage({
+                        "id": 'helloWorld.say',
+                        "default": 'say [TEXT]',
+                        "description": 'say something'
                     }),
-                    arguments: {
-                        TEXT: {
-                            type: ArgumentType.STRING,
-                            defaultValue: formatMessage({
-                                id: 'helloWorld.defaultTextToSay',
-                                default: 'hello world',
-                                description: 'default text to say.'
+                    "arguments": {
+                        "TEXT": {
+                            "type": ArgumentType.STRING,
+                            "defaultValue": formatMessage({
+                                "id": 'helloWorld.defaultTextToSay',
+                                "default": 'hello world',
+                                "description": 'default text to say.'
                             })
                         }
                     }
