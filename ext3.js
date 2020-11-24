@@ -18,7 +18,7 @@ class Scratch3HelloBlocks {
                     text: 'say [TEXT]',
                     arguments: {
                         TEXT: {
-                            type: ArgumentType.STRING,
+                            type: "string",
                             defaultValue: 'hello world'
                         }
                     }
