@@ -14,7 +14,7 @@ class Scratch3HelloBlocks {
             blocks: [
                 {
                     opcode: 'say',
-                    blockType: BlockType.COMMAND,
+                    blockType: "command",
                     text: 'say [TEXT]',
                     arguments: {
                         TEXT: {
