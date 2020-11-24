@@ -7,11 +7,7 @@ class Scratch3HelloBlocks {
     getInfo () {
         return {
             id: 'helloWorld',
-            name: formatMessage({
-                id: 'helloWorld.categoryName',
-                default: 'hello World',
-                description: 'Label for the hello world extension category'
-            }),
+            name: 'hello World',
             // menuIconURI: menuIconURI,
             blockIconURI: blockIconURI,
             // showStatusButton: true,
@@ -19,19 +15,11 @@ class Scratch3HelloBlocks {
                 {
                     opcode: 'say',
                     blockType: BlockType.COMMAND,
-                    text: formatMessage({
-                        id: 'helloWorld.say',
-                        default: 'say [TEXT]',
-                        description: 'say something'
-                    }),
+                    text: 'say [TEXT]',
                     arguments: {
                         TEXT: {
                             type: ArgumentType.STRING,
-                            defaultValue: formatMessage({
-                                id: 'helloWorld.defaultTextToSay',
-                                default: 'hello world',
-                                description: 'default text to say.'
-                            })
+                            defaultValue: 'hello world'
                         }
                     }
                 }
