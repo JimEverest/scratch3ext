@@ -4,6 +4,9 @@ const menuIconURI = blockIconURI;
 
 class Scratch3HelloBlocks {
 
+    constructor (runtime) {
+        this.runtime = runtime;
+    }
     getInfo () {
         return {
             id: 'helloWorld',
