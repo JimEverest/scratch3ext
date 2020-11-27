@@ -11,9 +11,9 @@ class hfweather{
   constructor (runtime){
     this.runtime = runtime;
     // communication related
-    this.comm = runtime.ioDevices.comm;
+    //this.comm = runtime.ioDevices.comm;
     this.session = null;
-    this.runtime.registerPeripheralExtension('hfweather', this);
+    //this.runtime.registerPeripheralExtension('hfweather', this);
     // session callbacks
     this.reporter = null;
     this.onmessage = this.onmessage.bind(this);
