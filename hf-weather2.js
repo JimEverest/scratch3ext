@@ -110,6 +110,7 @@ class hfweather{
   }
 
   getweather (args, util){
+    debugger
     const LOC = args.LOC;
     const url = new URL("https://free-api.heweather.net/s6/weather/now?");
     url.searchParams.append('location', LOC || 'auto_ip')
