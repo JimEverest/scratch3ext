@@ -74,12 +74,20 @@ class hfweather{
         {
           opcode: 'getWeather',
           blockType: BlockType.COMMAND,
+
           arguments: {
-            "LOC": {
-              "type": ArgumentType.STRING
+            LOC: {
+                type: "string",
+                defaultValue: 'loc...'
             }
           },
-          "text": 'Get Weather [LOC]'
+
+          // arguments: {
+          //   "LOC": {
+          //     "type": ArgumentType.STRING
+          //   }
+          // },
+          text: 'Get Weather [LOC]'
         },
         {
           opcode: 'temp',
