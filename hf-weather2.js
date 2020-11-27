@@ -20,8 +20,8 @@ class hfweather{
     //this.runtime.registerPeripheralExtension('hfweather', this);
     // session callbacks
     this.reporter = null;
-    this.onmessage = this.onmessage.bind(this);
-    this.onclose = this.onclose.bind(this);
+    //this.onmessage = this.onmessage.bind(this);
+    //this.onclose = this.onclose.bind(this);
     this.write = this.write.bind(this);
     // string op
     this.decoder = new TextDecoder();
@@ -32,34 +32,34 @@ class hfweather{
     this.session = null;
   }
 
-  write (data, parser = null){
-    if (this.session){
-      return new Promise(resolve => {
-        if (parser){
-          this.reporter = {
-            parser,
-            resolve
-          }
-        }
-        this.session.write(data);
-      })
-    }
-  }
+  // write (data, parser = null){
+  //   if (this.session){
+  //     return new Promise(resolve => {
+  //       if (parser){
+  //         this.reporter = {
+  //           parser,
+  //           resolve
+  //         }
+  //       }
+  //       this.session.write(data);
+  //     })
+  //   }
+  // }
 
-  onmessage (data){
-    const dataStr = this.decoder.decode(data);
-    this.lineBuffer += dataStr;
-    if (this.lineBuffer.indexOf('\n') !== -1){
-      const lines = this.lineBuffer.split('\n');
-      this.lineBuffer = lines.pop();
-      for (const l of lines){
-        if (this.reporter){
-          const {parser, resolve} = this.reporter;
-          resolve(parser(l));
-        };
-      }
-    }
-  }
+  // onmessage (data){
+  //   const dataStr = this.decoder.decode(data);
+  //   this.lineBuffer += dataStr;
+  //   if (this.lineBuffer.indexOf('\n') !== -1){
+  //     const lines = this.lineBuffer.split('\n');
+  //     this.lineBuffer = lines.pop();
+  //     for (const l of lines){
+  //       if (this.reporter){
+  //         const {parser, resolve} = this.reporter;
+  //         resolve(parser(l));
+  //       };
+  //     }
+  //   }
+  // }
 
 
   getInfo (){
