@@ -22,15 +22,15 @@ class hfweather{
     this.reporter = null;
     //this.onmessage = this.onmessage.bind(this);
     //this.onclose = this.onclose.bind(this);
-    this.write = this.write.bind(this);
+    //this.write = this.write.bind(this);
     // string op
     this.decoder = new TextDecoder();
     this.lineBuffer = '';
   }
 
-  onclose (){
-    this.session = null;
-  }
+  // onclose (){
+  //   this.session = null;
+  // }
 
   // write (data, parser = null){
   //   if (this.session){
